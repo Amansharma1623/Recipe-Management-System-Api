@@ -45,36 +45,36 @@ public class UserService {
 
     }
 
-    public String userSignIn(String email, String password) {
-        //check if the email is there in your tables
-        //sign in only possible if this person ever signed up
-
-        User existingUser = userRepo.findFirstByUserEmail(email);
-
-        if(existingUser == null)
-        {
-            return "Not a valid email, Please sign up first !!!";
-        }
-        //password should be matched
-        try {
-            String encryptedPassword = PasswordEncryptor.encrypt(password);
-
-            if(existingUser.getPassword().equals(encryptedPassword))
-            {
-                // return a token for this sign in
-                AuthenticationToken token  = new AuthenticationToken(existingUser);
-
-                    authenticationService.createToken(token);
-                    return "token Value" + " = " + token.getTokenValue();
-                }
-            else {
-                //password was wrong!!!
-                return "Invalid Credentials!!!";
-            }
-
-        } catch (NoSuchAlgorithmException e) {
-
-            return "Internal Server issues while saving password, try again later!!!";
-        }
-    }
+//    public String userSignIn(String email, String password) {
+//        //check if the email is there in your tables
+//        //sign in only possible if this person ever signed up
+//
+//        User existingUser = userRepo.findFirstByUserEmail(email);
+//
+//        if(existingUser == null)
+//        {
+//            return "Not a valid email, Please sign up first !!!";
+//        }
+//        //password should be matched
+//        try {
+//            String encryptedPassword = PasswordEncryptor.encrypt(password);
+//
+//            if(existingUser.getPassword().equals(encryptedPassword))
+//            {
+//                // return a token for this sign in
+//                AuthenticationToken token  = new AuthenticationToken(existingUser);
+//
+//                    authenticationService.createToken(token);
+//                    return "token Value" + " = " + token.getTokenValue();
+//                }
+//            else {
+//                //password was wrong!!!
+//                return "Invalid Credentials!!!";
+//            }
+//
+//        } catch (NoSuchAlgorithmException e) {
+//
+//            return "Internal Server issues while saving password, try again later!!!";
+//        }
+//    }
 }

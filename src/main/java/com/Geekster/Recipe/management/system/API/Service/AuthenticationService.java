@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class AuthenticationService {
 
-    @Autowired
-    IAuthenticationRepo authenticationRepo;
-    public void createToken(AuthenticationToken token) {
-        authenticationRepo.save(token);
-    }
+//    @Autowired
+//    IAuthenticationRepo authenticationRepo;
+//    public void createToken(AuthenticationToken token) {
+//        authenticationRepo.save(token);
+//    }
 }

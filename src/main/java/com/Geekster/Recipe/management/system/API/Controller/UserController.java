@@ -19,9 +19,9 @@ public class UserController {
     }
 
     //sign in
-    @PostMapping("user/signIn/{email}/{password}")
-    public String userSignIn(@PathVariable String email, @PathVariable String password)
-    {
-        return userService.userSignIn(email,password);
-    }
+//    @PostMapping("user/signIn/{email}/{password}")
+//    public String userSignIn(@PathVariable String email, @PathVariable String password)
+//    {
+//        return userService.userSignIn(email,password);
+//    }
 }
