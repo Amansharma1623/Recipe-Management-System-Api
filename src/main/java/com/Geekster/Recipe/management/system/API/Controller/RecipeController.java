@@ -17,7 +17,7 @@ public class RecipeController {
     //CREATE
     @PostMapping("Create/Recipe")
     public Recipe createRecipe(@RequestBody Recipe recipe) {
-        return recipeService.addTask(recipe);
+        return recipeService.createRecipe(recipe);
     }
 
     //READ

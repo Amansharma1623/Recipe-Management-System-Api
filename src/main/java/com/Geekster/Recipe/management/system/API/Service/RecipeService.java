@@ -15,7 +15,7 @@ public class RecipeService {
     IRecipeRepository recipeRepository;
 
     //CREATE
-    public Recipe addTask(Recipe recipe) {
+    public Recipe createRecipe(Recipe recipe) {
         return recipeRepository.save(recipe);
     }
 

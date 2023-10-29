@@ -17,7 +17,9 @@ public class Comment {
     private Long id;
     @NotBlank
     private String text;
+
     @ManyToOne
-    @JoinColumn(name = "recipe_id")
+    @JoinColumn(name = "fk_recipe_id")
     private Recipe recipe;
+
 }
