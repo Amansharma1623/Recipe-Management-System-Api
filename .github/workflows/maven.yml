@@ -27,4 +27,4 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Execute Jar file
-      run: sudo kill-9 'sudo lsof-t-i:8080'& sudojava-jar/home/ubuntu/actions-runner/_work/Recipe-Management-System-Api/Recipe-Management-System-Api/targetRecipe-management-system-API-0.0.1-SNAPSHOT.jar &
+      run: sudo kill-9 'sudo lsof-t-i:8080'& sudojava-jar/home/ubuntu/actions-runner/_work/Recipe-Management-System-Api/Recipe-Management-System-Api/target/Recipe-management-system-API-0.0.1-SNAPSHOT.jar &
