@@ -21,7 +21,7 @@
 ### RecipeService
 
 - getAllRecipes(): Retrieves all recipes.
-- getIdRecipes(): Retrieves Id recipes.
+- getIdRecipes(): Retrieve Id recipes.
 - createRecipe(Recipe recipe): Creates a new recipe.
 - updateRecipe(Long id, Recipe updatedRecipe, String username): Updates an existing recipe by ID, with owner authentication.
 - deleteRecipe(Long id): Deletes a recipe by ID.
